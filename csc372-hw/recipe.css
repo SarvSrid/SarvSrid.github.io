@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    /* This sets the background to silverware.jpg for Feature #1 */
     background-image: url(silverware.jpg);
     /* background-repeat: repeat; */
     background-size: cover;
@@ -7,18 +8,6 @@ body {
     color: #404040;
     font-size: 11pt;
     font-family: Georgia, Garamond, serif;
-}
-
-
-.title-page {
-    text-align: center;
-    background-color: #F0F0F0 ;
-    color: #A4A400;
-    padding: 10px;
-    display: block;
-    font-size: 22pt;
-    font-weight: bold;
-    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
 }
 
 h2, h3, h4, h5, h6 {
@@ -33,14 +22,34 @@ h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-.user-comment {
-    font-style: italic;
-    background-color: #FFFFA8;
+ul {
+    /* This ul is used to answer Features #3 */
+    list-style-image: url(pie_icon.gif);
+    margin-left: 20px;
+    padding-left: 20px;
 }
 
 a {
     color: #A4A400;
     text-decoration: underline;
+}
+
+.title-page {
+    text-align: center;
+    background-color: #F0F0F0 ;
+    color: #A4A400;
+    padding: 10px;
+    display: block;
+    font-size: 22pt;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+}
+
+
+
+.user-comment {
+    font-style: italic;
+    background-color: #FFFFA8;
 }
 
 #pre-formatted {
@@ -50,8 +59,3 @@ a {
     margin-top: 20px;
 }
 
-ul {
-    list-style-image: url(pie_icon.gif);
-    margin-left: 20px;
-    padding-left: 20px;
-}
