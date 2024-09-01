@@ -1,5 +1,9 @@
 body {
     background-color: white;
+    background-image: url(silverware.jpg);
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-attachment: fixed;
     color: #404040;
     font-size: 11pt;
     font-family: Georgia, Garamond, serif;
@@ -36,10 +40,6 @@ h2, h3, h4, h5, h6 {
 
 a {
     color: #A4A400;
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
@@ -48,4 +48,10 @@ a:hover {
     white-space: pre;
     text-align: left;
     margin-top: 20px;
+}
+
+ul {
+    list-style-image: url(pie_icon.gif);
+    margin-left: 20px;
+    padding-left: 20px;
 }
