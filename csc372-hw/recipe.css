@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+}
+
+
+.title-page {
+    text-align: center;
+    background-color: #F0F0F0 ;
+    color: #A4A400;
+    padding: 10px;
+    display: block;
+    font-size: 22pt;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #A4A400; 
+    background-color: #F0F0F0;
+    padding: 5px;
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.user-comment {
+    font-style: italic;
+    background-color: #FFFFA8;
+}
+
+a {
+    color: #A4A400;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#pre-formatted {
+    font-family: monospace;
+    white-space: pre;
+    text-align: left;
+    margin-top: 20px;
+}
