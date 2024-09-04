@@ -86,9 +86,13 @@ a {
     visibility: visible;
     }
 
-    #pre-formatted {
-        font-family: monospace;
-        white-space: pre;
-        text-align: left;
-        margin-top: 20px;
-    }
+#pre-formatted {
+    font-family: monospace;
+    white-space: pre;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#cake {
+    text-decoration: line-through;
+}
