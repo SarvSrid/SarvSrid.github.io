@@ -10,8 +10,12 @@ body {
     font-family: Georgia, Garamond, serif;
 }
 
-h2, h3, h4, h5, h6 {
-    color: #A4A400; 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #A4A400;
     background-color: #F0F0F0;
     padding: 5px;
     text-align: left;
@@ -36,7 +40,7 @@ a {
 
 .title-page {
     text-align: center;
-    background-color: #F0F0F0 ;
+    background-color: #F0F0F0;
     color: #A4A400;
     padding: 10px;
     display: block;
@@ -52,10 +56,39 @@ a {
     background-color: #FFFFA8;
 }
 
-#pre-formatted {
-    font-family: monospace;
-    white-space: pre;
-    text-align: left;
-    margin-top: 20px;
+.hover-info {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+    border-bottom: 1px dotted #000;
+    content: attr(data-tooltip);
+
 }
 
+.hover-info::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    white-space: nowrap;
+    background-color: #F0F0F0;
+    color: #404040;
+    padding: 5px;
+    border: 1px solid #A4A400;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 10pt;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+    
+.hover-info:hover::after {
+    opacity: 1;
+    visibility: visible;
+    }
+
+    #pre-formatted {
+        font-family: monospace;
+        white-space: pre;
+        text-align: left;
+        margin-top: 20px;
+    }
