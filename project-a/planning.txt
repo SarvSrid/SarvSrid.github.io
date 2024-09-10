@@ -1,0 +1,5 @@
+Background: #1C1C1C (Dark Charcoal)
+Accent 1: #FF6B6B (Bright Red)
+Accent 2: #FFD93D (Gold Yellow)
+Accent 3: #4ECDC4 (Cyan)
+Text: #FFFFFF (White)
