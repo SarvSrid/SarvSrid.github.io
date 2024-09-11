@@ -4,12 +4,16 @@ body {
     background-color: #1C1C1C;
     color: #FFFFFF;
     text-align: center
+    
 }
 
 hr {
-    border-color: #4ECDC4;
+    border-color: black;
 }
 
+/* main {
+    border: 5px solid ;
+} */
 /* Home Page */
 
 .tagline {
@@ -18,7 +22,7 @@ hr {
 }
 
 .splash {
-    padding: 30px 20px;
+    padding: 5px 20px;
     border: #000000;
 }
 
@@ -92,7 +96,7 @@ hr {
 }
 
 .trending-gallery img:hover {
-    transform: scale(1.15); 
+    transform: scale(1.05); 
 }
 
 .footer-section {
@@ -132,20 +136,19 @@ hr {
     width: 40px;
     height: 40px; 
     object-fit: cover; 
-    border-radius: 30%;
+    border-radius: 50%;
+    padding: 20px;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
+    justify-content: space-between; /* Aligns logo to the left and nav items to the right */
     align-items: center;
+    padding: 0px;
     width: 100%;
-    padding: 20px;
 }
 
 /* Navigation styling */
-/* Navigation Styling */
 nav {
     display: flex;
     align-items: center;
@@ -186,12 +189,13 @@ nav ul li a:hover {
     background-color: #1C1C1C;
     border-radius: 5px;
     overflow: hidden;
-    margin-left: auto; /* Aligns search bar to the right */
+    justify-content: center;
+    padding: 20px;
 }
 
 .search-form input {
     border: none;
-    padding: 8px 12px;
+    padding: 8px 60px;
     font-size: 16px;
     color: #FFFFFF;
     background-color: #4ECDC4;
@@ -202,20 +206,32 @@ nav ul li a:hover {
 
 .search-form button {
     border: none;
-    padding: 8px 12px;
+    padding: 8px 15px;
     background-color: #FFD93D;
     color: #1C1C1C;
     font-size: 16px;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
 .search-form button:hover {
     background-color: #FF6B6B;
 }
-
+ 
 /* Product List */
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    color: #FF6B6B;
+    border: 5px dotted;
+    display: inline-block; /* Shrink the border to the text content */
+    padding: 10px;
+}
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -224,7 +240,6 @@ nav ul li a:hover {
 }
 
 .product-item {
-    background-color: #4ECDC4;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -232,13 +247,14 @@ nav ul li a:hover {
 }
 
 .product-item img {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
+    height: 175px;
+    width: auto; 
     border-radius: 8px;
 }
 
 .product-item h2 {
-    color: #1C1C1C;
     font-size: 20px;
     margin: 10px 0;
 }
@@ -257,7 +273,6 @@ nav ul li a:hover {
     padding: 10px 15px;
     background-color: #FFD93D;
     color: #1C1C1C;
-    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -269,7 +284,7 @@ nav ul li a:hover {
 
 .product-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(27, 198, 204, 0.3);
 }
 /* Home Page */
 
