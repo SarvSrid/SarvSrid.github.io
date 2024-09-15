@@ -58,47 +58,6 @@ hr {
     background-color: #FF74A2;
 }
 
-.featured-product {
-    margin: 40px 0;
-}
-
-.featured-product img {
-    width: 300px;
-    border-radius: 20px;
-    border: 6px solid #FF6B6B;
-        transition: transform 0.5s ease;
-}
-
-.featured-product img:hover {
-    transform: scale(1.15); 
-}
-
-.trending {
-    height: 250px;
-    margin-top: 50px;
-    /* padding: 10px; */
-    margin: 10px auto;
-}
-
-.trending-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.trending-gallery img {
-    height: 175px;
-    width: auto; 
-    border-radius: 10px;
-    border: 5px solid #4ECDC4;
-    /* object-fit: cover; */
-    transition: transform 0.3s ease;
-}
-
-.trending-gallery img:hover {
-    transform: scale(1.05); 
-}
-
 .footer-section {
     flex: 1;
     padding: 0 20px;
@@ -140,9 +99,13 @@ hr {
     padding: 20px;
 }
 
+.logo-img:hover {
+    background-color: #202a2e;
+}
+
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Aligns logo to the left and nav items to the right */
+    justify-content: space-between;
     align-items: center;
     padding: 0px;
     width: 100%;
@@ -179,7 +142,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
     color: #4ECDC4;
-    background-color: #2F2F2F; /* Ensure the hover effect is visible */
+    background-color: #2F2F2F;
 }
 
 /* Search Bar Styling */
@@ -228,7 +191,7 @@ nav ul li a:hover {
     margin-top: 20px;
     color: #FF6B6B;
     border: 5px dotted;
-    display: inline-block; /* Shrink the border to the text content */
+    display: inline-block;
     padding: 10px;
 }
 
@@ -247,8 +210,6 @@ nav ul li a:hover {
 }
 
 .product-item img {
-    /* width: 100%;
-    height: auto; */
     height: 175px;
     width: auto; 
     border-radius: 8px;
@@ -291,7 +252,6 @@ nav ul li a:hover {
 #top-section {
     background-image: url('../images/desert.jpg');
     background-size: cover; 
-    /* background-position: center;*/
     border: 20px double #FFD93D; 
     box-sizing: border-box;
 }
@@ -304,6 +264,8 @@ nav ul li a:hover {
     width: 500px;
     margin: 30px auto;
 }
+
+/* Product Page */
 
 #available-products {
     color: #A4FF00;
