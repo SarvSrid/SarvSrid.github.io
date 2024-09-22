@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Georgia, serif;
+    color: #404040;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4ECDC4;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Introduction Section */
+
+.restaurant {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+aside {
+    width: 30%;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #4ECDC4;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+}
+
+#introduction {
+    width: 60%;
+}
+
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+
+/* Meal Plan Page */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    background-color: #4ECDC4;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #3CBCA6;
+}
+
+#meal-plan-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#dish-list, #meal-plan {
+    width: 45%;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#dish-list ul li {
+    margin-bottom: 8px;
+}
+
+#dish-info {
+    width: 60%;
+    margin-top: 20px;
+    border-top: 1px solid #DDD;
+    padding-top: 10px;
+}
+
+#selected-dishes li {
+    margin-bottom: 8px;
+}
