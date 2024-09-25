@@ -20,15 +20,15 @@ const dishDescriptions = {
         description: "Juicy wings covered in honey BBQ sauce with a perfect balance of sweet and savory.",
         price: "$9.95"
     },
-    "bww-buffalo": {
-        name: "Buffalo Wings",
-        description: "Classic Buffalo wings tossed in our signature spicy sauce.",
-        price: "$9.95"
+    "bww-cheese-curds": {
+        name: "Cheddar Cheese Curds",
+        description: "Golden, crispy cheddar cheese curds served with your choice of dip.",
+        price: "$5.95"
     },
-    "bww-cheeseburger": {
-        name: "Cheeseburger",
-        description: "Grilled to perfection and topped with melted cheese, lettuce, tomato, and onion.",
-        price: "$8.50"
+    "bww-chicken-sandwich": {
+        name: "Buffalo Ranch Chicken Sandwich",
+        description: "Crispy chicken breast topped with Swiss cheese, ranch dressing, and zesty buffalo sauce, served on a toasted bun.",
+        price: "$8.99"
     },
     "salsaritas-burrito": {
         name: "Chicken Burrito",

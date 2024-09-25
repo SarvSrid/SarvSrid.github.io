@@ -50,8 +50,9 @@ main {
 }
 
 .gallery img {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -82,6 +83,9 @@ footer {
     width: 60%;
 }
 
+#promotion-info li {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
 
 /* Meal Plan Page */
 
