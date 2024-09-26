@@ -68,26 +68,86 @@ document.addEventListener('DOMContentLoaded', () => {
             const dishName = button.parentElement.textContent.split(' - ')[0];
             const dishPrice = parseFloat(button.getAttribute('data-price'));
 
-            // Create a new list item for the selected dish
-            const li = document.createElement('li');
-            li.textContent = `${dishName} - $${dishPrice.toFixed(2)} `;
-            const removeButton = document.createElement('button');
-            removeButton.textContent = '-';
-            removeButton.classList.add('remove-btn');
-            removeButton.setAttribute('data-price', dishPrice);
-            li.appendChild(removeButton);
-            selectedDishes.appendChild(li);
+            let existingItem = Array.from(selectedDishes.children).find(li => li.dataset.name === dishName);
 
-            // Update the total cost
-            totalCost += dishPrice;
-            totalCostElement.textContent = totalCost.toFixed(2);
+            if (existingItem) {
 
-            // Add event listener to the remove button
-            removeButton.addEventListener('click', () => {
-                selectedDishes.removeChild(li);
-                totalCost -= dishPrice;
+                let quantityElement = existingItem.querySelector('.quantity');
+                let quantity = parseInt(quantityElement.textContent);
+                quantity++;
+                quantityElement.textContent = quantity;
+
+                let itemPriceElement = existingItem.querySelector('.item-price');
+                let newPrice = dishPrice * quantity;
+                itemPriceElement.textContent = `$${newPrice.toFixed(2)}`;
+
+
+                totalCost += dishPrice;
                 totalCostElement.textContent = totalCost.toFixed(2);
-            });
+            } else {
+                const li = document.createElement('li');
+                li.dataset.name = dishName;
+                li.innerHTML = `${dishName} - <span class="item-price">$${dishPrice.toFixed(2)}</span> (<span class="quantity">1</span>) `;
+                
+                const addButton = document.createElement('button');
+                addButton.textContent = '+';
+                addButton.classList.add('add-more-btn');
+                addButton.setAttribute('data-price', dishPrice);
+                addButton.style.marginRight = '10px';
+                li.appendChild(addButton);
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = '-';
+                removeButton.classList.add('remove-btn');
+                removeButton.setAttribute('data-price', dishPrice);
+                removeButton.style.marginLeft = '10px';
+                li.appendChild(removeButton);
+
+                selectedDishes.appendChild(li);
+
+                // Update the total cost
+                totalCost += dishPrice;
+                totalCostElement.textContent = totalCost.toFixed(2);
+
+
+                addButton.addEventListener('click', () => {
+                    let quantityElement = li.querySelector('.quantity');
+                    let quantity = parseInt(quantityElement.textContent);
+                    quantity++;
+                    quantityElement.textContent = quantity;
+
+                    let itemPriceElement = li.querySelector('.item-price');
+                    let newPrice = dishPrice * quantity;
+                    itemPriceElement.textContent = `$${newPrice.toFixed(2)}`;
+
+
+                    totalCost += dishPrice;
+                    totalCostElement.textContent = totalCost.toFixed(2);
+                });
+
+
+                removeButton.addEventListener('click', () => {
+                    let quantityElement = li.querySelector('.quantity');
+                    let quantity = parseInt(quantityElement.textContent);
+
+                    if (quantity > 1) {
+                        quantity--;
+                        quantityElement.textContent = quantity;
+
+                        let itemPriceElement = li.querySelector('.item-price');
+                        let newPrice = dishPrice * quantity;
+                        itemPriceElement.textContent = `$${newPrice.toFixed(2)}`;
+
+
+                        totalCost -= dishPrice;
+                        totalCostElement.textContent = totalCost.toFixed(2);
+                    } else {
+                        selectedDishes.removeChild(li);
+                        totalCost -= dishPrice;
+                        totalCostElement.textContent = totalCost.toFixed(2);
+                    }
+                });
+            }
         });
     });
 });
