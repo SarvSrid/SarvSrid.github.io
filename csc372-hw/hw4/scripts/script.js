@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let shuffleInterval = setInterval(() => {
             const randomIndex = Math.floor(Math.random() * 3);
             computerChoice = choices[randomIndex];
-            computerImage.src = `images/${computerChoice}.png`;
+            computerImage.src = `images/${computerChoice}.PNG`;
         }, 500);
 
         setTimeout(() => {
