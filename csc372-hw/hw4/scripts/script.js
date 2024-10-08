@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     playAgainButton.addEventListener("click", () => {
         resultText.textContent = "Make your choice!";
-        computerImage.src = "images/question-mark.png";
+        computerImage.src = "images/question-marks.png";
         playerChoices.forEach(c => c.classList.remove("selected"));
         playAgainButton.style.display = "none";
     });
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         computerWinsDisplay.textContent = computerWins;
         tiesDisplay.textContent = ties;
         resultText.textContent = "Make your choice!";
-        computerImage.src = "images/question-mark.png";
+        computerImage.src = "images/question-marks.png";
         playerChoices.forEach(c => c.classList.remove("selected"));
         playAgainButton.style.display = "none";
     });
