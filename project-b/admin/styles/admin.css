@@ -1,0 +1,135 @@
+body {
+    background-color: #ccc9c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 1em;
+}
+
+.logo-img {
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+div {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"], input[type="file"], input[type="number"], textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #EDF2F7;
+}
+
+table th {
+    background-color: #4A5568;
+    color: #FFFFFF;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #CBD5E0;
+}
+
+table td {
+    padding: 10px;
+    text-align: left;
+    color: #2D3748;
+    border: 1px solid #CBD5E0;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F7FAFC;
+}
+
+table tr:nth-child(even) {
+    background-color: #EDF2F7;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.logo-img:hover {
+    background-color: #333;
+}
+
+#action-buttons {
+    display: flex;
+    gap: 10px;
+}
