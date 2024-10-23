@@ -46,7 +46,11 @@ main {
     margin: 10px;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 0 10px rgba(2, 2, 75, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.repo:hover {
+    box-shadow: 0 0 10px rgba(2, 2, 75, 0.8);
 }
 
 .repo h2 {
