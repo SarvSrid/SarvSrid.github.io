@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Controls -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img class="logo-img" src="/images/logo.jpg" alt="My Art Store Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="shopping-cart">
+            <h1 class="title">Your Shopping Cart</h1>
+            <hr>
+            <ul class="product-list">
+
+            </ul>
+            <hr>
+            <div class="cart-summary">
+                <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
+                <p><strong>Tax (6.75%):</strong> <span id="tax">$0.00</span></p>
+                <p><strong>Delivery Fee:</strong> <span id="delivery">$5.00</span></p>
+                <p><strong>Service Fee:</strong> <span id="service">$3.00</span></p>
+                <p><strong>Total:</strong> <span id="total">$0.00</span></p>
+            </div>
+            <button class="cta-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </section>
+    </main>
+    <hr>
+
+    <!-- Footer Section -->
+    <footer id="store-footer">
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@pixelmasterpieces.com</p>
+            <p>Phone: +1 (800) 123-4567</p>
+            <p>Follow Us:</p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Pixel Masterpieces | All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

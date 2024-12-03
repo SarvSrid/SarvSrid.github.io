@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Midnight Pixel",
+        "description": "The midnight sky with stars",
+        "category": 2,
+        "imagePath": "/images/midnight.jpg",
+        "price": 20.00
+    },
+    {
+        "name": "Pixel Desert",
+        "description": "A deasert meant for the scenery",
+        "category": 4,
+        "imagePath": "/images/desert.jpg",
+        "price": 45.00
+    },
+    {
+        "name": "Pixel Character",
+        "description": "A professional Character design",
+        "category": 3,
+        "imagePath": "/images/sunset.jpg",
+        "price": 20.00
+    },
+    {
+        "name": "Nature Pixel",
+        "description": "A natural scenery for special occasions",
+        "category": 1,
+        "imagePath": "/images/nature.jpg",
+        "price": 40.00
+    }
+]

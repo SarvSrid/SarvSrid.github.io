@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Product Management</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="../scripts/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Admin - Manage Products</h1>
+        <a href="admin-products.html">
+            <img class="logo-img" src="../images/logo.jpg" alt="My Art Store Logo">
+        </a>
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="../index.html">User Home</a></li>
+                <li><a href="admin-upload.html">Upload Products</a></li>
+                <li><a href="admin-products.html">Manage Products</a></li>
+                <li><a href="admin-add.html">Add Product</a></li>
+                <li><a href="product-edit.html?id=1">Edit Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button onclick="addProduct()">Add New Product</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

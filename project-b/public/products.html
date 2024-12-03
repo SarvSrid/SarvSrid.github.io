@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Controls -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img class="logo-img" src="/images/logo.jpg" alt="My Art Store Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="title">Available Products</h1>
+        <hr>
+        
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <label for="category-select">Filter by Category:</label>
+            <select id="category-select" onchange="filterByCategory()">
+                <option value="all">All Categories</option>
+
+            </select>
+        </div>
+        
+
+        <div class="product-grid-list">
+
+        </div>
+    </main>
+    <hr>
+
+    <!-- Footer Section -->
+    <footer id="store-footer">
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@pixelmasterpieces.com</p>
+            <p>Phone: +1 (800) 123-4567</p>
+            <p>Follow Us:</p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Pixel Masterpieces | All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

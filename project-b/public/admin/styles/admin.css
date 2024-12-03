@@ -117,8 +117,8 @@ table tr:nth-child(even) {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 50%;
     padding: 15px;
@@ -132,4 +132,35 @@ table tr:nth-child(even) {
 #action-buttons {
     display: flex;
     gap: 10px;
+}
+
+.admin-nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav ul li {
+    display: inline;
+}
+
+.admin-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.admin-nav ul li a:hover {
+    background-color: #777;
 }

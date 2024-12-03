@@ -45,3 +45,26 @@ CREATE TABLE CartProducts (
     FOREIGN KEY (cart_id) REFERENCES Carts(id),
     FOREIGN KEY (product_id) REFERENCES Products(id)
 );
+
+-- Orders Table
+CREATE TABLE Orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    cart_id INTEGER NOT NULL,
+    order_date DATETIME NOT NULL,
+    total_amount REAL NOT NULL,
+    status TEXT CHECK (status IN ('processing', 'shipped', 'delivered', 'canceled')) NOT NULL,
+    customer_id INTEGER NOT NULL,
+    FOREIGN KEY (cart_id) REFERENCES Carts(id),
+    FOREIGN KEY (customer_id) REFERENCES Users(id)
+);
+
+-- OrderProducts Table
+CREATE TABLE OrderProducts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    order_id INTEGER NOT NULL,
+    product_id INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    price_per_unit REAL NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES Orders(id),
+    FOREIGN KEY (product_id) REFERENCES Products(id)
+);
