@@ -26,5 +26,5 @@
    cd project-b
 
 ## Running server commands
-- ```nodemon server.js
-- ```npm start
+- nodemon server.js
+- npm start
