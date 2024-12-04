@@ -1,36 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (window.location.pathname === '/cart.html' && !localStorage.getItem('loggedIn')) {
-//         window.location.href = '/signin.html'; // Redirect to sign-in page
-//     }
-
-//     // Populate cart only if logged in
-//     if (localStorage.getItem('loggedIn')) {
-//         populateCart();
-//     }
-// });
-
-// //Sign in functionality
-// function signIn() {
-//     const email = document.getElementById('email').value;
-//     const password = document.getElementById('password').value;
-
-//     fetch('/api/login', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ email, password }),
-//     })
-//         .then((response) => {
-//             if (response.ok) {
-//                 localStorage.setItem('loggedIn', 'true'); // Set login flag
-//                 window.location.href = '/index.html'; // Redirect to index page
-//             } else {
-//                 document.getElementById('signin-message').textContent =
-//                     'Invalid email or password.';
-//             }
-//         })
-//         .catch((error) => console.error('Error during login:', error));
-// }
-
 // Add product to cart functionality
 function addToCart(productId, productName, productPrice) {
     fetch('/api/cart/add', {

@@ -23,7 +23,6 @@ app.listen(PORT, () => {
 });
 
 //Handling shutdown and clearing cart
-
 function clearCartOnShutdown() {
     console.log('Clearing cart as the server is shutting down...');
     try {
