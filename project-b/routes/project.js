@@ -4,6 +4,11 @@ const productsController = require('../controllers/productsController');
 const cartController = require('../controllers/cartController');
 const adminController = require('../controllers/adminController');
 
+// Sign-in page
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/signin.html'));
+});
+
 // Products routes
 router.get('/products', productsController.getProducts);
 router.get('/products/:id', productsController.getProductDetails);

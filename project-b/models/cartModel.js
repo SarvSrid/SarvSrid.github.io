@@ -15,7 +15,7 @@ exports.getOrCreateCart = (userId) => {
 // Fetch all items in cart for a specific cart ID
 exports.getCart = (cartId) => {
     const stmt = db.prepare(`
-        SELECT cp.id, p.name, p.image_url AS image, p.price, cp.quantity 
+        SELECT cp.id AS cartProductId, p.id AS productId, p.name, p.image_url AS image, p.price, cp.quantity 
         FROM CartProducts cp
         JOIN Products p ON cp.product_id = p.id
         WHERE cp.cart_id = ?

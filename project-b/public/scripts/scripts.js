@@ -1,3 +1,36 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//     if (window.location.pathname === '/cart.html' && !localStorage.getItem('loggedIn')) {
+//         window.location.href = '/signin.html'; // Redirect to sign-in page
+//     }
+
+//     // Populate cart only if logged in
+//     if (localStorage.getItem('loggedIn')) {
+//         populateCart();
+//     }
+// });
+
+// //Sign in functionality
+// function signIn() {
+//     const email = document.getElementById('email').value;
+//     const password = document.getElementById('password').value;
+
+//     fetch('/api/login', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ email, password }),
+//     })
+//         .then((response) => {
+//             if (response.ok) {
+//                 localStorage.setItem('loggedIn', 'true'); // Set login flag
+//                 window.location.href = '/index.html'; // Redirect to index page
+//             } else {
+//                 document.getElementById('signin-message').textContent =
+//                     'Invalid email or password.';
+//             }
+//         })
+//         .catch((error) => console.error('Error during login:', error));
+// }
+
 // Add product to cart functionality
 function addToCart(productId, productName, productPrice) {
     fetch('/api/cart/add', {
@@ -69,7 +102,12 @@ function viewDetails(productId) {
 // Populate the cart dynamically
 function populateCart() {
     fetch('/api/cart')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch cart items.');
+            }
+            return response.json();
+        })
         .then(cartItems => {
             const productList = document.querySelector('#shopping-cart .product-list');
             let subtotal = 0;
@@ -89,14 +127,16 @@ function populateCart() {
                         <img src="${item.image}" alt="${item.name}">
                         <p><strong>Name:</strong> ${item.name}</p>
                         <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
-                        <p><strong>Quantity:</strong> ${item.quantity}</p>
-                        <button onclick="removeFromCart(${item.id})">Remove</button>
+                        <p><strong>Quantity:</strong> 
+                            <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.productId}, this.value)">
+                        </p>
+                        <button onclick="removeFromCart(${item.productId})">Remove</button>
                     </li>
                 `;
             }).join('');
 
             const tax = subtotal * 0.0675;
-            const total = subtotal + tax + 5 + 3; // Delivery and service fees
+            const total = subtotal + tax + 5 + 3;
 
             document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
             document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
@@ -503,3 +543,4 @@ function uploadFile() {
 
     reader.readAsText(file);
 }
+

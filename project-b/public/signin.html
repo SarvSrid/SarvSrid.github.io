@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <main class="signin-container">
+        <h1>Sign In</h1>
+        <form id="signin-form" autocomplete="off">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="button" onclick="window.location.href='index.html'">Sign In</button>
+        </form>
+        <p id="signin-message" class="error-message"></p>
+    </main>
+</body>
+
+</html>

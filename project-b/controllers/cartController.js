@@ -5,7 +5,13 @@ const userId = 1;
 
 exports.getCart = (req, res) => {
     try {
+        const userId = 1; // Example hardcoded userId, update based on session or auth logic
         const cart = cartModel.getOrCreateCart(userId);
+
+        if (!cart) {
+            return res.status(404).json({ error: 'Cart not found.' });
+        }
+
         const cartItems = cartModel.getCart(cart.id);
         res.json(cartItems);
     } catch (error) {
