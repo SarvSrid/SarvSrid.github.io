@@ -46,6 +46,7 @@ CREATE TABLE CartProducts (
     FOREIGN KEY (product_id) REFERENCES Products(id)
 );
 
+-- Newly Added Tables
 -- Orders Table
 CREATE TABLE Orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
