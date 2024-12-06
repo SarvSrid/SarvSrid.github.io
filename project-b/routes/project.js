@@ -13,6 +13,8 @@ router.get('/', (req, res) => {
 router.get('/products', productsController.getProducts);
 router.get('/products/:id', productsController.getProductDetails);
 router.get('/categories', productsController.getAllCategories);
+// Add Unsplash route
+router.get('/unsplash', productsController.getProductImages);
 
 // Cart routes
 router.get('/cart', cartController.getCart);

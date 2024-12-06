@@ -511,3 +511,25 @@ function uploadFile() {
     reader.readAsText(file);
 }
 
+// Fetch and display images from Unsplash
+function fetchUnsplashImages(query = 'pixel art') {
+    fetch(`/api/unsplash?query=${query}`)
+        .then(response => response.json())
+        .then(images => {
+            const imageContainer = document.querySelector('.unsplash-images');
+            imageContainer.innerHTML = images.map(image => `
+                <div class="image-card">
+                    <img src="${image.url}" alt="${image.description || 'Unsplash Image'}">
+                    <p>${image.description || 'No description available'}</p>
+                </div>
+            `).join('');
+        })
+        .catch(error => {
+            console.error('Error fetching Unsplash images:', error);
+            const imageContainer = document.querySelector('.unsplash-images');
+            imageContainer.innerHTML = '<p>Error loading images from Unsplash.</p>';
+        });
+}
+
+// Call function on page load
+fetchUnsplashImages();
